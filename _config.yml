@@ -76,12 +76,12 @@ author:
       url: "https://github.com/vkumbhar94"
     #- label: "Tableau Public"
     #  url: "https://public.tableau.com/app/profile/yu.dong#!/"
-    - label: "✅ My Weekly Vizzes"
-      url: "https://vkumbhar94.github.io/personal-website/categories/#data-viz"
-    - label: "✅ My Bi-Monthly Reading Notes"
-      url: "https://vkumbhar94.github.io/personal-website/categories/#reading-notes"
-    - label: "✅ My Blog Posts"
-      url: "https://vkumbhar94.github.io/personal-website/categories/#blog"
+    #- label: "✅ My Weekly Vizzes"
+    #  url: "https://vkumbhar94.github.io/personal-website/categories/#data-viz"
+    #- label: "✅ My Bi-Monthly Reading Notes"
+    #  url: "https://vkumbhar94.github.io/personal-website/categories/#reading-notes"
+    #- label: "✅ My Blog Posts"
+    #  url: "https://vkumbhar94.github.io/personal-website/categories/#blog"
 
 footer:
   links:
