@@ -1,42 +1,33 @@
-<head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NLK6G9NP');</script>
-<!-- End Google Tag Manager -->
-</head>
-
 ## Home Page
 
 ### About Me
 
-Hi there! I am Yu Dong. I am a detail-oriented data scientist and storyteller. I graduated from MS Business Analytics program from USC Marshall School of Business in Dec 2017. After graduation, I worked as a product analyst at Ancestry.com for three years, using analytics to understand user behavior, improve product engagement, and enable data-driven business decision-making. Then I joined Brex as a Data Scientist in late 2020, exploring more analytics and data science application in the fintech industry. I am passionate about interepreting data under business context and data-driven business decision-making.
+Hello! I'm Vaibhav Kumbhar, a results-driven software engineer with expertise in distributed systems. I hold a Bachelor's degree in Computer Science and Engineering from Walchand College of Engineering, completed in 2016.
 
-I'm also a lifelong learner with deep curiosity. I have completed [more than 30 online courses](https://vkumbhar94.github.io/personal-website/blogs/MOOCList) on Coursera, edX and other MOOC platforms in subjects ranging from Statistics to Machine Learning.
+Following graduation, I began my professional journey at Veritas, where I gained valuable experience. Since December 2019, I've been an integral part of the LogicMonitor team, where I design and implement scalable solutions that drive business growth.
 
-Outside work, I make one data visualization on Tableau Public every week since 2018. You can find my collections [here](https://vkumbhar94.github.io/personal-website/project/ProjectList/).
+I'm passionate about building robust distributed systems and exploring the intersection of software engineering and data science. I'm excited to connect and explore opportunities for growth and collaboration.
 
-My analytical skillset includes:
+My technical skillset includes:
 
-- Data mining: R, Python, Spark (in Scala and PySpark), Excel
-- Visualization: Tableau, R Shiny
-- Databases: MySQL, Amazon Redshift, Snowflake
-- A/B Testing and Causal Inference
-- Machine learning models
+- **Programming**: Python, Scala, Java, Go
+- **Distributed Systems**: Microservices architecture, system design
+- **Data Technologies**: Spark (Scala and PySpark), SQL databases
+- **Data Analysis**: R, Python data science libraries
+- **Visualization**: Tableau, R Shiny
+- **Databases**: MySQL, Amazon Redshift, Snowflake
+- **Cloud Platforms**: AWS, distributed computing
+- **Machine Learning**: ML models and data-driven insights
 
 ### About This Site
 
-This site works as a gallery of my data projects as well as my own thoughts on data analysis. You will find:
+This site showcases my technical projects, data visualizations, and thoughts on software engineering and data science. You will find:
 
-1. [My Weekly Tableau Visualizations](https://vkumbhar94.github.io/personal-website/categories/#data-viz) since 2018 at the **data viz** category
-2. [Bi-monthly Reading Notes](https://vkumbhar94.github.io/personal-website/categories/#reading-notes) since 2020 at the **reading notes** category
-3. [Blogs](https://vkumbhar94.github.io/personal-website/categories/#blog) on my own thoughts and experience in the data science fields at the **blog** tag
+1. [Technical Blog Posts](https://vkumbhar94.github.io/personal-website/categories/#blog) sharing insights from my software engineering journey
+2. [Data Visualization Projects](https://vkumbhar94.github.io/personal-website/categories/#data-viz) including weekly Tableau visualizations
+3. [Project Showcases](https://vkumbhar94.github.io/personal-website/categories/#projects) demonstrating technical implementations and solutions
 
 ### Contact Me  
 
-[My LinkedIn](https://www.linkedin.com/in/beingvaibhav/)  
-[My Github](https://github.com/vkumbhar94)  
-[My Medium Profile](https://medium.com/@vkumbhar94)  
-E-mail: vkumbhar94@gmail.com
+[LinkedIn](https://www.linkedin.com/in/beingvaibhav/) • [GitHub](https://github.com/vkumbhar94) • [Medium](https://medium.com/@vkumbhar94)  
+Email: vkumbhar94@gmail.com
