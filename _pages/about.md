@@ -23,9 +23,8 @@ My analytical skillset includes:
 
 On this blog site, you will find:
 
-1. [My Weekly Tableau Visualizations](https://vkumbhar94.github.io/personal-website/categories/#data-viz) since 2018 at the **data viz** category
-2. [Bi-monthly Reading Notes](https://vkumbhar94.github.io/personal-website/categories/#reading-notes) since 2020 at the **reading notes** category
-3. [Blogs](https://vkumbhar94.github.io/personal-website/categories/#blog) on my own thoughts and experience in the data science fields at the **blog** tag
+1. [Blog posts](https://vkumbhar94.github.io/personal-website/categories/#blog) on my thoughts and experience in software engineering and data science
+2. [All posts](https://vkumbhar94.github.io/personal-website/posts/) in chronological order
 
 ### Contact Me  
 

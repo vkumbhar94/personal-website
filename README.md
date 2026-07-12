@@ -21,11 +21,10 @@ My technical skillset includes:
 
 ### About This Site
 
-This site showcases my technical projects, data visualizations, and thoughts on software engineering and data science. You will find:
+This site shares my thoughts on software engineering and data science. You will find:
 
 1. [Technical Blog Posts](https://vkumbhar94.github.io/personal-website/categories/#blog) sharing insights from my software engineering journey
-2. [Data Visualization Projects](https://vkumbhar94.github.io/personal-website/categories/#data-viz) including weekly Tableau visualizations
-3. [Project Showcases](https://vkumbhar94.github.io/personal-website/categories/#projects) demonstrating technical implementations and solutions
+2. [All posts](https://vkumbhar94.github.io/personal-website/posts/) in chronological order
 
 ### Contact Me  
 
