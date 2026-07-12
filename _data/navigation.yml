@@ -9,3 +9,4 @@ main:
     url: /about/
   - title: "Resume"
     url: https://vkumbhar94.github.io/resume/
+    target: "_blank"

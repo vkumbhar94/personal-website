@@ -28,6 +28,6 @@ On this blog site, you will find:
 
 ### Contact Me  
 
-[My LinkedIn](https://www.linkedin.com/in/beingvaibhav/)  
-[My Github](https://github.com/vkumbhar94)  
+[My LinkedIn](https://www.linkedin.com/in/beingvaibhav/){:target="_blank" rel="noopener"}  
+[My Github](https://github.com/vkumbhar94){:target="_blank" rel="noopener"}  
 E-mail: vkumbhar94@gmail.com
