@@ -3,27 +3,28 @@ permalink: /about/
 title: "About"
 ---
 
-Hello everyone, I'm Vaibhav Kumbhar. I hold a Bachelor's degree in Computer Science and Engineering from Walchand College of Engineering, completed in 2016.
+Hello, I'm Vaibhav Kumbhar — a software engineer with 9 years of experience building backend systems and distributed infrastructure, and 2+ years leading engineering teams. I hold a B.Tech in Computer Science and Engineering from Walchand College of Engineering (2016).
 
-Following graduation, I began my professional journey at Veritas, where I gained valuable experience. Since December 2019, I've been an integral part of the Logicmonitor team.
+I currently lead the Logs platform team at LogicMonitor as a Lead Software Engineer. Over my time there I've scaled the Argus monitoring platform to handle 10K+ resources and built its Kubernetes monitoring from the ground up, before moving on to architect the Logs platform. Earlier, at Veritas/Cohesity, I worked on a disaster recovery platform, including AWS integration and Azure asset discovery. I'm based in Pune, India.
 
-I'm excited to connect with you all and explore opportunities for growth and collaboration.
+I enjoy designing resilient, high-scale systems, mentoring engineers, and contributing to open source. I'd love to connect and explore opportunities for collaboration.
 
-Results-driven software engineer with expertise in distributed systems. Proven ability to design and implement scalable solutions that drive business growth. Currently at Logicmonitor, previously at Veritas. Let's connect and explore opportunities for collaboration.
+My core skills include:
 
-My analytical skillset includes:
+- **Languages**: Go, Python, Java
+- **Distributed systems**: Microservices, Kafka, event-driven architecture
+- **Infrastructure**: Kubernetes, Docker, Helm
+- **Databases**: MySQL, Redis, Cassandra
+- **Cloud**: AWS, Google Cloud, Azure
+- **Leadership**: Team leadership, mentorship, and technical strategy
 
-- Data mining: R, Python, Spark (in Scala and PySpark), Excel
-- Visualization: Tableau, R Shiny
-- Databases: MySQL, Amazon Redshift, Snowflake
-- A/B Testing and Causal Inference
-- Machine learning models
+In open source, I authored the LogicMonitor Helm Charts and have contributed to the pkgx.dev package runner.
 
 ### About This Site
 
 On this blog site, you will find:
 
-1. [Blog posts](https://vkumbhar94.github.io/personal-website/categories/#blog) on my thoughts and experience in software engineering and data science
+1. [Blog posts](https://vkumbhar94.github.io/personal-website/categories/#blog) on my thoughts and experience in software engineering and distributed systems
 2. [All posts](https://vkumbhar94.github.io/personal-website/posts/) in chronological order
 
 ### Contact Me  
