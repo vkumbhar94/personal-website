@@ -1,0 +1,348 @@
+<!-- Custom head hook (Minimal Mistakes head/custom.html override).
+     Adds a runtime light/dark mode toggle. Minimal Mistakes compiles a single
+     skin at build time, so dark mode is layered on here as CSS overrides keyed
+     off <html data-theme="dark">, with a floating toggle button + localStorage
+     persistence and prefers-color-scheme as the default. -->
+
+<!-- Set theme before first paint to avoid a flash of the wrong theme -->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', stored || (prefersDark ? 'dark' : 'light'));
+    } catch (e) {}
+  })();
+</script>
+
+<style>
+  /* ---- Dark theme palette ---- */
+  html[data-theme="dark"] {
+    --dm-bg: #16181d;
+    --dm-surface: #1e2127;
+    --dm-surface-2: #262a31;
+    --dm-text: #d6d9de;
+    --dm-muted: #9aa0aa;
+    --dm-border: #333842;
+    --dm-link: #6cb6ff;
+    --dm-link-hover: #8fc7ff;
+    --dm-code-bg: #24272e;
+  }
+
+  /* ---- Base surfaces ---- */
+  html[data-theme="dark"] body {
+    background-color: var(--dm-bg) !important;
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .initial-content,
+  html[data-theme="dark"] .page,
+  html[data-theme="dark"] .archive,
+  html[data-theme="dark"] .sidebar {
+    background-color: transparent !important;
+    color: var(--dm-text);
+  }
+
+  /* ---- Masthead + navigation ---- */
+  html[data-theme="dark"] .masthead {
+    background-color: var(--dm-bg) !important;
+    border-bottom-color: var(--dm-border) !important;
+  }
+  html[data-theme="dark"] .greedy-nav {
+    background: var(--dm-bg) !important;
+  }
+  html[data-theme="dark"] .greedy-nav a,
+  html[data-theme="dark"] .site-title {
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .site-subtitle {
+    color: var(--dm-muted) !important;
+  }
+  html[data-theme="dark"] .greedy-nav a:hover {
+    color: var(--dm-link) !important;
+  }
+  html[data-theme="dark"] .greedy-nav .visible-links a::before {
+    background: var(--dm-link) !important;
+  }
+  html[data-theme="dark"] .greedy-nav .hidden-links {
+    background: var(--dm-surface) !important;
+    border-color: var(--dm-border) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+  }
+  html[data-theme="dark"] .greedy-nav .hidden-links a {
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .greedy-nav .hidden-links a:hover {
+    color: var(--dm-link) !important;
+    background: var(--dm-surface-2) !important;
+  }
+  html[data-theme="dark"] .greedy-nav .hidden-links::before {
+    border-bottom-color: var(--dm-surface) !important;
+  }
+  /* hamburger + search icons */
+  html[data-theme="dark"] .greedy-nav__toggle .navicon,
+  html[data-theme="dark"] .greedy-nav__toggle .navicon::before,
+  html[data-theme="dark"] .greedy-nav__toggle .navicon::after {
+    background: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .search__toggle {
+    color: var(--dm-text) !important;
+  }
+
+  /* ---- Search overlay ---- */
+  html[data-theme="dark"] .search-content {
+    background: var(--dm-bg) !important;
+  }
+  html[data-theme="dark"] .search-input {
+    background: transparent !important;
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .search-input::placeholder {
+    color: var(--dm-muted) !important;
+  }
+
+  /* ---- Content typography ---- */
+  html[data-theme="dark"] .page__title,
+  html[data-theme="dark"] .page__content,
+  html[data-theme="dark"] .page__content p,
+  html[data-theme="dark"] .page__content li,
+  html[data-theme="dark"] .page__content dl,
+  html[data-theme="dark"] .page__content h1,
+  html[data-theme="dark"] .page__content h2,
+  html[data-theme="dark"] .page__content h3,
+  html[data-theme="dark"] .page__content h4,
+  html[data-theme="dark"] .page__content h5,
+  html[data-theme="dark"] .page__content h6,
+  html[data-theme="dark"] .archive__subtitle,
+  html[data-theme="dark"] .archive__item-excerpt {
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .page__meta,
+  html[data-theme="dark"] .page__date,
+  html[data-theme="dark"] .page__taxonomy,
+  html[data-theme="dark"] .page__lead {
+    color: var(--dm-muted) !important;
+  }
+  html[data-theme="dark"] a,
+  html[data-theme="dark"] .page__content a {
+    color: var(--dm-link);
+  }
+  html[data-theme="dark"] a:hover,
+  html[data-theme="dark"] .page__content a:hover {
+    color: var(--dm-link-hover);
+  }
+  html[data-theme="dark"] .archive__item-title,
+  html[data-theme="dark"] .archive__item-title a {
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .archive__item-title a:hover {
+    color: var(--dm-link) !important;
+  }
+  html[data-theme="dark"] .page__content h1,
+  html[data-theme="dark"] .page__content h2 {
+    border-bottom-color: var(--dm-border) !important;
+  }
+
+  /* ---- Sidebar / author profile ---- */
+  html[data-theme="dark"] .author__name {
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .author__bio {
+    color: var(--dm-muted) !important;
+  }
+  html[data-theme="dark"] .author__urls {
+    background: var(--dm-surface) !important;
+    border-color: var(--dm-border) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+  }
+  html[data-theme="dark"] .author__urls::before {
+    border-bottom-color: var(--dm-surface) !important;
+  }
+  html[data-theme="dark"] .author__urls a {
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .author__urls a:hover {
+    color: var(--dm-link) !important;
+  }
+  html[data-theme="dark"] .btn--inverse {
+    background: var(--dm-surface-2) !important;
+    border-color: var(--dm-border) !important;
+    color: var(--dm-text) !important;
+  }
+  html[data-theme="dark"] .btn--inverse:hover {
+    background: var(--dm-border) !important;
+  }
+
+  /* ---- Code ---- */
+  html[data-theme="dark"] code,
+  html[data-theme="dark"] .highlighter-rouge {
+    background: var(--dm-code-bg) !important;
+    color: #e6e6e6 !important;
+  }
+  html[data-theme="dark"] pre,
+  html[data-theme="dark"] div.highlight,
+  html[data-theme="dark"] figure.highlight,
+  html[data-theme="dark"] .highlight {
+    background: var(--dm-code-bg) !important;
+    color: #d6d9de !important;
+  }
+  html[data-theme="dark"] pre code,
+  html[data-theme="dark"] .highlight code {
+    background: transparent !important;
+  }
+  /* Rouge token colors tuned for a dark background */
+  html[data-theme="dark"] .highlight .c,
+  html[data-theme="dark"] .highlight .c1,
+  html[data-theme="dark"] .highlight .cm,
+  html[data-theme="dark"] .highlight .cd { color: #7f8894 !important; font-style: italic; }
+  html[data-theme="dark"] .highlight .k,
+  html[data-theme="dark"] .highlight .kd,
+  html[data-theme="dark"] .highlight .kn,
+  html[data-theme="dark"] .highlight .kp,
+  html[data-theme="dark"] .highlight .kr,
+  html[data-theme="dark"] .highlight .kt,
+  html[data-theme="dark"] .highlight .o,
+  html[data-theme="dark"] .highlight .ow { color: #ff7b72 !important; }
+  html[data-theme="dark"] .highlight .s,
+  html[data-theme="dark"] .highlight .s1,
+  html[data-theme="dark"] .highlight .s2,
+  html[data-theme="dark"] .highlight .sb,
+  html[data-theme="dark"] .highlight .sd,
+  html[data-theme="dark"] .highlight .se,
+  html[data-theme="dark"] .highlight .sh,
+  html[data-theme="dark"] .highlight .si,
+  html[data-theme="dark"] .highlight .sx,
+  html[data-theme="dark"] .highlight .sr { color: #a5d6ff !important; }
+  html[data-theme="dark"] .highlight .mi,
+  html[data-theme="dark"] .highlight .mf,
+  html[data-theme="dark"] .highlight .mh,
+  html[data-theme="dark"] .highlight .il { color: #f2cc60 !important; }
+  html[data-theme="dark"] .highlight .nf,
+  html[data-theme="dark"] .highlight .nc,
+  html[data-theme="dark"] .highlight .nn { color: #d2a8ff !important; }
+
+  /* ---- Blockquote, tables, rules, notices ---- */
+  html[data-theme="dark"] blockquote {
+    color: var(--dm-muted) !important;
+    border-left-color: var(--dm-border) !important;
+  }
+  html[data-theme="dark"] table { color: var(--dm-text) !important; border-color: var(--dm-border) !important; }
+  html[data-theme="dark"] td,
+  html[data-theme="dark"] th { border-color: var(--dm-border) !important; }
+  html[data-theme="dark"] th { background: var(--dm-surface-2) !important; }
+  html[data-theme="dark"] tr:nth-child(2n) { background: var(--dm-surface) !important; }
+  html[data-theme="dark"] hr { border-color: var(--dm-border) !important; }
+  html[data-theme="dark"] .notice,
+  html[data-theme="dark"] .notice--primary,
+  html[data-theme="dark"] .notice--info,
+  html[data-theme="dark"] .notice--warning,
+  html[data-theme="dark"] .notice--success,
+  html[data-theme="dark"] .notice--danger {
+    background-color: var(--dm-surface) !important;
+    color: var(--dm-text) !important;
+  }
+
+  /* ---- Table of contents ---- */
+  html[data-theme="dark"] .toc {
+    background: var(--dm-surface) !important;
+    border-color: var(--dm-border) !important;
+  }
+  html[data-theme="dark"] .toc .nav__title { background: var(--dm-link) !important; color: #16181d !important; }
+  html[data-theme="dark"] .toc__menu a { color: var(--dm-muted) !important; }
+  html[data-theme="dark"] .toc__menu a:hover { color: var(--dm-link) !important; }
+
+  /* ---- Pagination ---- */
+  html[data-theme="dark"] .pagination a { color: var(--dm-text) !important; border-color: var(--dm-border) !important; }
+  html[data-theme="dark"] .pagination a:hover { background: var(--dm-surface-2) !important; }
+  html[data-theme="dark"] .pagination .current { background: var(--dm-link) !important; color: #16181d !important; border-color: var(--dm-link) !important; }
+
+  /* ---- Footer ---- */
+  html[data-theme="dark"] .page__footer {
+    background-color: var(--dm-surface) !important;
+    color: var(--dm-muted) !important;
+  }
+  html[data-theme="dark"] .page__footer a,
+  html[data-theme="dark"] .page__footer-copyright,
+  html[data-theme="dark"] .page__footer-follow .social-icons a {
+    color: var(--dm-muted) !important;
+  }
+  html[data-theme="dark"] .page__footer a:hover,
+  html[data-theme="dark"] .page__footer-follow .social-icons a:hover {
+    color: var(--dm-link) !important;
+  }
+
+  /* ---- Toggle button ---- */
+  #dark-mode-toggle {
+    position: fixed;
+    bottom: 1.25em;
+    right: 1.25em;
+    z-index: 1000;
+    width: 3em;
+    height: 3em;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    color: #333333;
+    font-size: 1.1em;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+  }
+  #dark-mode-toggle:hover { transform: scale(1.08); }
+  #dark-mode-toggle:focus-visible { outline: 2px solid #6cb6ff; outline-offset: 2px; }
+  html[data-theme="dark"] #dark-mode-toggle {
+    background: #262a31;
+    color: #f2cc60;
+    border-color: #3a3a3a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #dark-mode-toggle { transition: none; }
+    #dark-mode-toggle:hover { transform: none; }
+  }
+</style>
+
+<!-- Inject the toggle button and wire up switching + persistence -->
+<script>
+  (function () {
+    function icon(t) { return t === 'dark' ? '☀️' : '🌙'; } /* sun : moon */
+    function label(t) { return t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'; }
+
+    function sync(btn, t) {
+      if (!btn) return;
+      btn.textContent = icon(t);
+      btn.setAttribute('aria-label', label(t));
+      btn.title = label(t);
+      btn.setAttribute('aria-pressed', t === 'dark');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var btn = document.createElement('button');
+      btn.id = 'dark-mode-toggle';
+      btn.type = 'button';
+      sync(btn, current);
+      btn.addEventListener('click', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync(btn, next);
+      });
+      document.body.appendChild(btn);
+    });
+
+    /* Follow OS theme changes only while the user hasn't made an explicit choice */
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        try { if (localStorage.getItem('theme')) return; } catch (err) {}
+        var t = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        sync(document.getElementById('dark-mode-toggle'), t);
+      });
+    }
+  })();
+</script>
