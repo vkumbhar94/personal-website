@@ -56,12 +56,13 @@ plugins:
   - jekyll-include-cache
   - jekyll-seo-tag
 
-# Analytics
+# Analytics — Google Tag Manager container (installed via the "custom" provider,
+# see _includes/analytics-providers/custom.html + the GTM noscript in
+# _layouts/default.html). Only injected in production builds by the theme.
 analytics:
-  provider: "google-gtag"
+  provider: "custom"
   google:
     tracking_id: "GTM-NLK6G9NP"
-    anonymize_ip: false
 
 author:
   name: "Vaibhav Kumbhar"
